@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shanghai Box («Шанхай Бокс») — товары из Китая под заказ</title>
+<meta name="description" content="Мы в Шанхае: купим товар на Taobao, 1688, Pinduoduo, Poizon и доставим до пункта СДЭК в вашем городе. Пришлите ссылку или фото в Telegram-бот — он сразу посчитает цену.">
+<meta property="og:title" content="Shanghai Box — привезём любую вещь из Китая">
+<meta property="og:description" content="Товары из Китая под заказ с доставкой до пункта СДЭК в вашем городе. Цена — сразу в Telegram-боте.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#D7263D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23D7263D'/%3E%3Cpath d='M16 6.5 25 11v10l-9 4.5L7 21V11z M7 11l9 4.5 9-4.5 M16 15.5v10' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/manrope-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/manrope-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/manrope-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Unbounded'; font-style: normal; font-weight: 700 800; font-display: swap; src: url(fonts/unbounded-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Unbounded'; font-style: normal; font-weight: 700 800; font-display: swap; src: url(fonts/unbounded-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Unbounded'; font-style: normal; font-weight: 700 800; font-display: swap; src: url(fonts/unbounded-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  :root {
+    --red: #D7263D;
+    --deep: #8E0F22;
+    --gold: #FFD447;
+    --gold-dark: #C9A21F;
+    --ink: #2A0710;
+    --muted: #7A5A60;
+    --paper: #FFF8F3;
+    --card: #FFFFFF;
+    --line: #F1DDD6;
+    --soft: #FCEAE6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { font-family: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--paper); font-size: 17px; line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: Unbounded, Manrope, sans-serif; line-height: 1.15; letter-spacing: -.01em; }
+  h2 { font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; }
+  h3 { font-size: 18px; font-weight: 700; }
+  .sub { color: var(--muted); font-size: 18px; margin-top: 12px; max-width: 640px; }
+  .sec { padding: 88px 0; }
+  .sec + .sec { padding-top: 0; }
+  .sec-head { margin-bottom: 40px; }
+
+  /* Кнопки */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 54px; padding: 0 26px; border-radius: 14px; font-weight: 800; font-size: 16px; white-space: nowrap; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(1px); }
+  .btn-gold { background: var(--gold); color: var(--ink); box-shadow: 0 5px 0 var(--gold-dark); }
+  .btn-gold:active { box-shadow: 0 2px 0 var(--gold-dark); }
+  .btn-red { background: var(--red); color: #fff; box-shadow: 0 5px 0 var(--deep); }
+  .btn-line { border: 2px solid rgba(255,255,255,.5); color: #fff; }
+  .btn-line:hover { background: rgba(255,255,255,.1); }
+  .btn-sm { height: 42px; padding: 0 16px; font-size: 15px; border-radius: 11px; box-shadow: none; }
+  .btn-sm:hover { transform: none; background: #C11F35; }
+
+  /* Шапка */
+  header { position: sticky; top: 0; z-index: 20; background: rgba(255,248,243,.9); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 66px; }
+  .logo { display: flex; align-items: center; gap: 11px; font-family: Unbounded, Manrope, sans-serif; font-weight: 800; font-size: 18px; white-space: nowrap; }
+  .logo b { color: var(--red); }
+  .mark { width: 38px; height: 38px; border-radius: 11px; background: var(--red); display: grid; place-items: center; flex: none; }
+  .mark svg { width: 22px; height: 22px; }
+  nav { display: flex; gap: 28px; font-weight: 700; font-size: 15px; color: var(--muted); }
+  nav a:hover { color: var(--red); }
+
+  /* Первый экран */
+  .hero { position: relative; overflow: hidden; color: #fff; background: radial-gradient(110% 90% at 88% 0%, #EC4359 0%, var(--red) 38%, var(--deep) 100%); }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.13) 1.5px, transparent 1.5px); background-size: 26px 26px; mask-image: linear-gradient(100deg, transparent 35%, #000 90%); -webkit-mask-image: linear-gradient(100deg, transparent 35%, #000 90%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 56px; align-items: center; padding-top: 76px; padding-bottom: 96px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px 7px 9px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24); font-size: 14px; font-weight: 700; }
+  .eyebrow b { background: var(--gold); color: var(--ink); border-radius: 999px; padding: 2px 9px; font-size: 12px; }
+  h1 { font-size: clamp(34px, 5.4vw, 62px); font-weight: 800; margin: 24px 0 20px; }
+  h1 em { font-style: normal; color: var(--gold); }
+  .lead { font-size: clamp(17px, 1.7vw, 20px); max-width: 570px; color: rgba(255,255,255,.9); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 36px; }
+  .chip { background: #fff; color: var(--deep); font-weight: 800; font-size: 14px; padding: 7px 13px; border-radius: 9px; }
+  .chip.more { background: transparent; color: #fff; border: 1.5px dashed rgba(255,255,255,.55); }
+  .cta { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  /* Карточка посылки */
+  .ticket { background: var(--card); color: var(--ink); border-radius: 24px; padding: 26px; box-shadow: 0 30px 60px -20px rgba(42,7,16,.55); transform: rotate(2deg); }
+  .t-top { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .t-top span:last-child { color: var(--red); }
+  .route { display: grid; grid-template-columns: auto 1fr auto 1fr auto; align-items: center; gap: 10px; margin: 22px 0; }
+  .pt { text-align: center; }
+  .code { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 15px; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 15px; background: var(--soft); color: var(--red); }
+  .pt:first-child .code { background: var(--red); color: #fff; }
+  .pt:last-child .code { background: var(--gold); color: var(--ink); }
+  .pt small { display: block; margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .line { position: relative; height: 56px; margin-bottom: 26px; }
+  .line::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2.5px dashed #E5C3BB; }
+  .line i { position: absolute; top: 50%; left: 0; width: 30px; height: 30px; margin-top: -15px; border-radius: 9px; background: var(--ink); display: grid; place-items: center; animation: ride 4.5s ease-in-out infinite; }
+  .line i svg { width: 17px; height: 17px; }
+  .line + .pt + .line i { animation-delay: 2.2s; }
+  @keyframes ride { 0% { left: 0; } 70%, 100% { left: calc(100% - 30px); } }
+  .t-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .t-cell { background: var(--paper); border-radius: 14px; padding: 12px 14px; }
+  .t-cell span { display: block; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .t-cell b { font-size: 16px; }
+  .progress { margin-top: 16px; height: 8px; border-radius: 99px; background: var(--soft); overflow: hidden; }
+  .progress i { display: block; width: 64%; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--red), #F0576B); }
+  .t-note { margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--muted); }
+
+  /* Шаги */
+  .steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 26px 22px 24px; }
+  .step .n { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 13px; background: var(--soft); color: var(--red); font-family: Unbounded, sans-serif; font-weight: 800; font-size: 19px; margin-bottom: 18px; }
+  .step:last-child .n { background: var(--red); color: #fff; }
+  .step p { margin-top: 8px; color: var(--muted); font-size: 16px; }
+  .hint { margin-top: 22px; display: flex; gap: 12px; align-items: center; padding: 16px 20px; border-radius: 16px; background: #FFF3C4; font-weight: 600; }
+  .hint a { color: var(--red); font-weight: 800; border-bottom: 1.5px solid currentColor; }
+
+  /* Путь посылки */
+  .path { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--card); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+  .leg { padding: 26px 24px; border-right: 1px solid var(--line); }
+  .leg:last-child { border-right: 0; }
+  .leg .em { font-size: 30px; line-height: 1; }
+  .leg h3 { margin-top: 14px; font-size: 17px; }
+  .leg p { color: var(--muted); font-size: 15px; margin-top: 6px; }
+  .leg .time { display: inline-block; margin-top: 14px; padding: 5px 11px; border-radius: 8px; background: var(--soft); color: var(--red); font-weight: 800; font-size: 14px; }
+  .leg:last-child .time { background: var(--gold); color: var(--ink); }
+  .total-time { margin-top: 18px; font-weight: 700; color: var(--muted); }
+  .total-time b { color: var(--ink); }
+
+  /* Цена */
+  .price { background: var(--ink); color: #fff; border-radius: 32px; padding: 56px; position: relative; overflow: hidden; }
+  .price .sub { color: rgba(255,255,255,.7); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 30px; font-size: 14px; font-weight: 700; color: rgba(255,255,255,.7); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .legend .dot, .legend .band { position: relative; top: auto; transform: none; }
+  .legend .band { display: inline-block; width: 26px; height: 10px; }
+  .versus { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+  .vs { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 22px; padding: 24px; }
+  .vs h3 { font-size: 18px; }
+  .vs-src { margin-top: 4px; font-size: 14px; color: rgba(255,255,255,.6); }
+  .vs-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .vs-nums span { display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: rgba(255,255,255,.55); }
+  .vs-nums b { display: block; font-family: Unbounded, sans-serif; font-size: 22px; font-weight: 800; margin-top: 4px; white-space: nowrap; }
+  .vs-us b { color: var(--gold); }
+  .vs-wb b { font-size: 16px; padding-top: 5px; }
+  .vs-nums small { display: block; font-size: 13px; color: rgba(255,255,255,.6); margin-top: 2px; }
+  .scale { position: relative; height: 22px; margin-top: 18px; }
+  .scale::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed rgba(255,255,255,.22); }
+  .band { position: absolute; top: 50%; height: 10px; transform: translateY(-50%); border-radius: 99px; background: rgba(255,255,255,.28); }
+  .dot { position: absolute; top: 50%; display: inline-block; width: 16px; height: 16px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px var(--ink); }
+  .dot.reg { background: var(--ink); border: 2.5px solid var(--gold); }
+  .vs-note { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,.75); }
+  .vs-note b { color: var(--gold); }
+  .takeaways { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; margin-top: 36px; align-items: start; }
+  .tk p + p { margin-top: 12px; }
+  .tk p:not(.ex-title) { color: rgba(255,255,255,.8); font-size: 16px; }
+  .bulk-wb { margin-top: 14px; font-weight: 700; }
+  .ex-title { font-family: Unbounded, sans-serif; font-weight: 700; font-size: 17px; margin-bottom: 14px; }
+  .bulk { background: var(--gold); color: var(--ink); border-radius: 22px; padding: 24px; }
+  .bulk .ex-title { margin-bottom: 6px; }
+  .bulk p { font-size: 15px; color: rgba(42,7,16,.75); }
+  .bars { display: grid; gap: 10px; margin-top: 18px; }
+  .bar-row { display: grid; grid-template-columns: 74px 1fr auto; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; }
+  .bar-row i { display: block; height: 12px; border-radius: 99px; background: var(--ink); }
+  .fine-note { margin-top: 22px; font-size: 13px; color: rgba(255,255,255,.55); }
+
+  /* Что везём */
+  .cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .cat { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; font-weight: 700; }
+  .cat .ic { width: 52px; height: 52px; border-radius: 14px; background: var(--soft); display: grid; place-items: center; font-size: 26px; flex: none; }
+  .cat small { display: block; font-weight: 600; color: var(--muted); font-size: 14px; }
+
+  /* Почему мы */
+  .why { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .why-item { display: flex; gap: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 24px; }
+  .why-item .ic { width: 48px; height: 48px; border-radius: 13px; background: var(--red); display: grid; place-items: center; flex: none; }
+  .why-item .ic svg { width: 24px; height: 24px; }
+  .why-item p { color: var(--muted); font-size: 16px; margin-top: 6px; }
+
+  /* Вопросы */
+  .faq { display: grid; gap: 12px; max-width: 820px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 0 22px; }
+  summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 17px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--soft); color: var(--red); font-size: 22px; font-weight: 700; transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { padding: 0 0 20px; color: var(--muted); }
+
+  /* Контакты */
+  .contact { background: radial-gradient(100% 120% at 0% 0%, #EC4359 0%, var(--red) 40%, var(--deep) 100%); color: #fff; border-radius: 32px; padding: 56px; }
+  .contact .sub { color: rgba(255,255,255,.85); }
+  .socials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .soc { background: #fff; color: var(--ink); border-radius: 24px; padding: 22px; display: flex; flex-direction: column; transition: transform .15s ease; }
+  .soc:hover { transform: translateY(-3px); }
+  .soc-top { display: flex; align-items: center; gap: 12px; }
+  .soc-ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex: none; color: #fff; }
+  .soc-ic svg { width: 24px; height: 24px; }
+  .soc-ic.tg { background: #2AABEE; }
+  .soc-ic.ig { background: linear-gradient(45deg, #F9A825, #E1306C 55%, #833AB4); }
+  .who b { display: block; font-size: 17px; }
+  .who span { display: block; font-size: 14px; font-weight: 700; color: var(--muted); }
+  .soc p { margin-top: 12px; font-size: 15px; color: var(--muted); }
+  .soc img { width: 148px; height: 148px; margin: 18px auto 4px; image-rendering: pixelated; }
+  .soc .go { margin-top: auto; padding-top: 14px; font-weight: 800; color: var(--red); font-size: 15px; }
+  .soc.main { box-shadow: 0 0 0 4px var(--gold); }
+  .soc .badge { align-self: flex-start; margin-bottom: 12px; background: var(--gold); color: var(--ink); font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
+  .links { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 24px; font-weight: 700; }
+  .links a { border-bottom: 1.5px solid rgba(255,255,255,.4); }
+  .links a:hover { border-color: #fff; }
+
+  footer { padding: 36px 0 44px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; }
+  footer nav { gap: 18px; font-size: 14px; }
+  footer .fine { flex-basis: 100%; font-size: 12px; opacity: .8; }
+  footer .reqs { flex-basis: 100%; padding-top: 16px; border-top: 1px solid var(--line); }
+  footer .reqs p + p { margin-top: 6px; }
+  footer .reqs b { color: var(--ink); }
+  footer .reqs a { border-bottom: 1px solid currentColor; }
+  footer .docs { display: flex; flex-wrap: wrap; gap: 6px 20px; font-weight: 700; color: var(--ink); }
+
+  .dock { display: none; }
+
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 44px; padding-top: 52px; padding-bottom: 64px; }
+    .ticket { max-width: 460px; transform: rotate(0); }
+    .steps, .path { grid-template-columns: repeat(2, 1fr); }
+    .leg:nth-child(2) { border-right: 0; }
+    .leg:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .cats { grid-template-columns: repeat(2, 1fr); }
+    .versus, .takeaways { grid-template-columns: minmax(0, 1fr); }
+    .socials { grid-template-columns: minmax(0, 1fr); }
+    .soc { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 18px; align-items: center; }
+    .soc .badge, .soc-top, .soc p, .soc .go { grid-column: 1; }
+    .soc img { grid-column: 2; grid-row: 1 / span 4; width: 112px; height: 112px; margin: 0; }
+  }
+  @media (max-width: 720px) {
+    body { font-size: 16px; padding-bottom: 78px; }
+    .wrap { padding: 0 16px; }
+    header nav, .bar .btn { display: none; }
+    .bar { height: 58px; }
+    .sec { padding: 60px 0; }
+    .sec-head { margin-bottom: 28px; }
+    .sub { font-size: 16px; }
+    .cta .btn { flex: 1 1 100%; }
+    .steps, .cats, .why, .path { grid-template-columns: 1fr; }
+    .leg { border-right: 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; column-gap: 16px; padding: 20px; }
+    .leg:last-child { border-bottom: 0; }
+    .leg .em { grid-row: span 3; }
+    .leg h3 { margin-top: 0; }
+    .leg .time { justify-self: start; margin-top: 10px; }
+    .step { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; padding: 20px; }
+    .step .n { grid-row: span 2; margin-bottom: 0; }
+    .step p { margin-top: 4px; }
+    .price, .contact { padding: 32px 20px; border-radius: 26px; }
+    .vs { padding: 20px; }
+    .vs-nums b { font-size: 19px; }
+    .vs-wb b { font-size: 15px; }
+    .ticket { padding: 20px; }
+    .code { width: 48px; height: 48px; font-size: 13px; border-radius: 13px; }
+    .route { gap: 6px; }
+    .soc { display: flex; padding: 20px; }
+    .soc img { display: none; }   /* QR с телефона на этом же телефоне не отсканировать */
+    .dock { display: block; position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,248,243,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
+    .dock .btn { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .line i { animation: none; left: 50%; }
+    .btn, .soc { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.4 3.6 2.9 10.8c-1 .4-.9 1.7.1 2l4.6 1.4 1.8 5.7c.2.7 1.1 1 1.7.4l2.6-2.5 4.8 3.5c.7.5 1.6.1 1.8-.7l3-15.3c.2-1-.8-1.9-1.9-1.4Zm-4 4.6-7.6 6.9-.3 3.1-1.3-4.2 8.7-5.4c.4-.2.8.3.5.6Z"/></symbol>
+  <symbol id="box" viewBox="0 0 24 24"><path d="M12 2.8 20.5 7v10L12 21.2 3.5 17V7z M3.5 7 12 11.2 20.5 7 M12 11.2v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.2" r="3.4"/></g></symbol>
+  <symbol id="bot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4.5M9 13h.01M15 13h.01M9.5 16.5h5"/></g></symbol>
+  <symbol id="mega" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6l-7 4zM17.5 9a4 4 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Shanghai Box — на главную">
+      <span class="mark"><svg style="color:#fff"><use href="#box"/></svg></span>
+      <span>Shanghai <b>Box</b></span>
+    </a>
+    <nav aria-label="Разделы">
+      <a href="#how">Как заказать</a>
+      <a href="#route">Доставка</a>
+      <a href="#price">Цены</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="btn btn-red btn-sm" href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener"><svg><use href="#tg"/></svg>Заказать в боте</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><b>Шанхай → Россия</b> Товары из Китая под заказ</span>
+        <h1>Привезём <em>любую</em> вещь из&nbsp;Китая</h1>
+        <p class="lead">Мы живём в Шанхае: купим товар у продавца, отправим карго и передадим в СДЭК до пункта выдачи в вашем городе. Цену бот назовёт сразу — пришлите ссылку или фото.</p>
+        <div class="chips" aria-label="Площадки">
+          <span class="chip">Taobao</span><span class="chip">1688</span><span class="chip">Pinduoduo</span><span class="chip">Poizon</span><span class="chip more">и другие</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-gold" href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener"><svg><use href="#tg"/></svg>Рассчитать в боте</a>
+          <a class="btn btn-line" href="https://t.me/cargo_cn_rus" target="_blank" rel="noopener">Наш канал</a>
+        </div>
+      </div>
+
+      <div class="ticket" aria-hidden="true">
+        <div class="t-top"><span>Ваша посылка</span><span>● В пути</span></div>
+        <div class="route">
+          <div class="pt"><span class="code">SH</span><small>Шанхай</small></div>
+          <div class="line"><i><svg style="color:var(--gold)"><use href="#box"/></svg></i></div>
+          <div class="pt"><span class="code">RU</span><small>Россия</small></div>
+          <div class="line"><i><svg style="color:var(--gold)"><use href="#box"/></svg></i></div>
+          <div class="pt"><span class="code">📍</span><small>Ваш город</small></div>
+        </div>
+        <div class="t-grid">
+          <div class="t-cell"><span>Срок</span><b>3–6 недель</b></div>
+          <div class="t-cell"><span>Выдача</span><b>пункт СДЭК</b></div>
+        </div>
+        <div class="progress"><i></i></div>
+        <p class="t-note">Статус заказа бот присылает сам</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Как заказать</h2>
+        <p class="sub">Всё — в Telegram-боте <a href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener" style="color:var(--red);font-weight:800">@shanghaibox_bot</a>. Четыре шага от ссылки до посылки.</p>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="n">1</span><h3>Пришлите ссылку или фото</h3><p>С Taobao, 1688, Pinduoduo, Poizon — или скриншот вещи. Можно несколько ссылок в одном заказе.</p></li>
+        <li class="step"><span class="n">2</span><h3>Получите цену</h3><p>Бот считает товар, доставку до вашего города и всё остальное. Сумма — до оплаты.</p></li>
+        <li class="step"><span class="n">3</span><h3>Оплатите</h3><p>Переводом по QR-коду через СБП и пришлите чек в бот. Покупаем товар у продавца сами.</p></li>
+        <li class="step"><span class="n">4</span><h3>Заберите в СДЭК</h3><p>Бот сообщит, когда посылка выкуплена, в пути, передана в СДЭК и ждёт в пункте выдачи.</p></li>
+      </ol>
+      <p class="hint"><span style="font-size:22px">🔎</span><span>Нашли вещь на Wildberries или Ozon? Пришлите ссылку — найдём такую же в Китае и сравним цену до оплаты.</span></p>
+    </div>
+  </section>
+
+  <section class="sec" id="route">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Как едет посылка</h2>
+        <p class="sub">Собираем заказы в общую партию — так карго выходит дешевле. В России посылку везёт СДЭК, её можно отслеживать по трек-номеру.</p>
+      </div>
+      <ol class="path">
+        <li class="leg"><span class="em">🛒</span><h3>Выкуп в Китае</h3><p>Покупаем у продавца, он отправляет товар на склад карго.</p><span class="time">3–7 дней</span></li>
+        <li class="leg"><span class="em">🚚</span><h3>Карго в Россию</h3><p>Партия едет через границу и проходит оформление.</p><span class="time">2–3 недели</span></li>
+        <li class="leg"><span class="em">📦</span><h3>Передаём в СДЭК</h3><p>Вы получаете трек-номер и можете следить за посылкой.</p><span class="time">1–2 дня</span></li>
+        <li class="leg"><span class="em">📍</span><h3>Пункт выдачи</h3><p>СДЭК везёт до пункта или постамата в вашем городе.</p><span class="time">3–14 дней</span></li>
+      </ol>
+      <p class="total-time">Всего — <b>от 3 до 6 недель</b>, зависит от города.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="price">
+    <div class="wrap">
+      <div class="price">
+        <h2>Сравните с маркетплейсами</h2>
+        <p class="sub">Реальные цены на 9 ноября 2026: кроссовки с официального сайта Nike в Китае и те же модели на Wildberries. Наша цена — под ключ, до пункта СДЭК.</p>
+        <div class="legend" aria-hidden="true"><span><i class="dot"></i>у нас, распродажа в Китае</span><span><i class="dot reg"></i>у нас, обычная цена</span><span><i class="band"></i>цены на WB</span></div>
+        <div class="versus">
+          <article class="vs">
+            <h3>Nike Air Force 1 ’07</h3>
+            <p class="vs-src">Официальный Nike в Китае: 799 ¥, на распродаже 11.11 — 639 ¥</p>
+            <div class="vs-nums">
+              <div class="vs-us"><span>У нас</span><b>10 550 ₽</b><small>12 700 ₽ без распродажи</small></div>
+              <div class="vs-wb"><span>Вайлдберриз</span><b>11 245–19 166 ₽</b><small>новые оригиналы</small></div>
+            </div>
+            <div class="scale" aria-hidden="true">
+              <i class="band" style="left:17.1%;width:77.3%"></i>
+              <i class="dot reg" style="left:31.3%"></i>
+              <i class="dot" style="left:10.3%"></i>
+            </div>
+            <p class="vs-note">На распродаже — на <b>695 ₽ дешевле</b> самой дешёвой пары на WB</p>
+          </article>
+          <article class="vs">
+            <h3>Nike Dunk Low Retro</h3>
+            <p class="vs-src">Официальный Nike в Китае: 749 ¥, на распродаже 11.11 — 599 ¥</p>
+            <div class="vs-nums">
+              <div class="vs-us"><span>У нас</span><b>10 000 ₽</b><small>12 050 ₽ без распродажи</small></div>
+              <div class="vs-wb"><span>Вайлдберриз</span><b>11 770–30 761 ₽</b><small>новые оригиналы</small></div>
+            </div>
+            <div class="scale" aria-hidden="true">
+              <i class="band" style="left:12.2%;width:83.7%"></i>
+              <i class="dot reg" style="left:13.4%"></i>
+              <i class="dot" style="left:4.4%"></i>
+            </div>
+            <p class="vs-note">На распродаже — на <b>1 770 ₽ дешевле</b> самой дешёвой пары на WB</p>
+          </article>
+          <article class="vs">
+            <h3>Air Jordan 1 Low</h3>
+            <p class="vs-src">Официальный Nike в Китае: 849 ¥, на распродаже 11.11 — 639 ¥</p>
+            <div class="vs-nums">
+              <div class="vs-us"><span>У нас</span><b>10 550 ₽</b><small>13 400 ₽ без распродажи</small></div>
+              <div class="vs-wb"><span>Вайлдберриз</span><b>13 177–33 569 ₽</b><small>новые оригиналы</small></div>
+            </div>
+            <div class="scale" aria-hidden="true">
+              <i class="band" style="left:14.7%;width:81.3%"></i>
+              <i class="dot reg" style="left:15.6%"></i>
+              <i class="dot" style="left:4.2%"></i>
+            </div>
+            <p class="vs-note">На распродаже — на <b>2 627 ₽ дешевле</b> самой дешёвой пары на WB</p>
+          </article>
+          <article class="vs">
+            <h3>Nike Zoom Vomero 5</h3>
+            <p class="vs-src">Официальный Nike в Китае: 1099 ¥, на распродаже 11.11 — 789 ¥</p>
+            <div class="vs-nums">
+              <div class="vs-us"><span>У нас</span><b>12 550 ₽</b><small>16 750 ₽ без распродажи</small></div>
+              <div class="vs-wb"><span>Вайлдберриз</span><b>12 265–21 693 ₽</b><small>новые оригиналы</small></div>
+            </div>
+            <div class="scale" aria-hidden="true">
+              <i class="band" style="left:10.8%;width:83.4%"></i>
+              <i class="dot reg" style="left:50.5%"></i>
+              <i class="dot" style="left:13.4%"></i>
+            </div>
+            <p class="vs-note">Даже на распродаже — на 285 ₽ дороже самой дешёвой пары на WB</p>
+          </article>
+        </div>
+
+        <div class="takeaways">
+          <div class="tk">
+            <p class="ex-title">Что видно из сравнения</p>
+            <p>По обычной цене Nike в Китае пара выходит как самые дешёвые оригиналы на WB, хотя там сейчас распродажа 11.11. Когда распродажа идёт в Китае (11.11, 618 и другие), выходит дешевле.</p>
+            <p>Air Force 1 за 2–5 тыс. ₽ на маркетплейсах стоят меньше, чем у самого Nike в Китае, — повод насторожиться. Мы покупаем там, где скажете вы, хоть в официальном магазине бренда.</p>
+          </div>
+          <div class="bulk">
+            <p class="ex-title">Мелочи — берите пачкой</p>
+            <p>Одну недорогую вещь проще купить в России: доставка съест разницу. Чем больше вещей в заказе, тем дешевле каждая. Labubu за 99 ¥, цена за штуку:</p>
+            <div class="bars" aria-label="Цена одной игрушки в зависимости от количества">
+              <div class="bar-row"><span>1 шт.</span><i style="width:100%"></i><span>2 950 ₽</span></div>
+              <div class="bar-row"><span>3 шт.</span><i style="width:70%"></i><span>2 070 ₽</span></div>
+              <div class="bar-row"><span>5 шт.</span><i style="width:65%"></i><span>1 930 ₽</span></div>
+            </div>
+            <p class="bulk-wb">На WB — от 1 176 до 2 733 ₽ за штуку.</p>
+          </div>
+        </div>
+        <p class="fine-note">В нашей цене всё: товар по курсу ЦБ, наша работа, карго, упаковка и СДЭК до пункта выдачи в Москве (курс на 07.11.2026, 1 ¥ = 12,27 ₽). Без доплат при получении. Цены Nike — nike.com.cn, цены WB — новые пары в поиске Wildberries 9 ноября 2026, уже со скидками 11.11, без ресейла. Цены меняются каждый день — точную сумму для вашего заказа назовёт бот.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Что можно привезти</h2>
+        <p class="sub">Для себя, в подарок или на продажу — штучно и оптом.</p>
+      </div>
+      <div class="cats">
+        <div class="cat"><span class="ic">👕</span><div>Одежда<small>бренды и масс-маркет</small></div></div>
+        <div class="cat"><span class="ic">👟</span><div>Обувь<small>кроссовки, ботинки, сандалии</small></div></div>
+        <div class="cat"><span class="ic">👜</span><div>Сумки и аксессуары<small>рюкзаки, кошельки, украшения</small></div></div>
+        <div class="cat"><span class="ic">🎧</span><div>Электроника<small>гаджеты и аксессуары</small></div></div>
+        <div class="cat"><span class="ic">🏠</span><div>Товары для дома<small>декор, кухня, хранение</small></div></div>
+        <div class="cat"><span class="ic">🧸</span><div>Детские товары<small>игрушки, одежда</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Почему это удобно</h2>
+      </div>
+      <div class="why">
+        <div class="why-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="6"/><path d="M12 16v5M9 21h6"/></svg></span><div><h3>Мы на месте, в Шанхае</h3><p>Сами общаемся с продавцами и покупаем товар — вам не нужны китайский язык и аккаунты на площадках.</p></div></div>
+        <div class="why-item"><span class="ic"><svg style="color:#fff"><use href="#bot"/></svg></span><div><h3>Цена за минуту</h3><p>Бот считает стоимость сразу, днём и ночью. Сумма известна до оплаты.</p></div></div>
+        <div class="why-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span><div><h3>Видно каждый шаг</h3><p>Бот сам сообщает, где заказ, а в России — даёт трек-номер СДЭК.</p></div></div>
+        <div class="why-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h4"/></svg></span><div><h3>Понятная оплата</h3><p>Перевод по QR-коду через СБП на счёт ИП. Сумма известна заранее и не меняется при получении.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Частые вопросы</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>Сколько идёт посылка?</summary><p>От 3 до 6 недель до пункта выдачи СДЭК: 2–3 недели карго в Россию, затем СДЭК до вашего города. Точный срок бот назовёт при расчёте.</p></details>
+        <details><summary>Как узнать стоимость?</summary><p>Напишите боту @shanghaibox_bot, пришлите ссылку или фото, выберите категорию и количество. Бот посчитает сумму с доставкой до вашего города, а мы подтвердим её.</p></details>
+        <details><summary>С каких сайтов можно заказать?</summary><p>Taobao, 1688, Pinduoduo, Poizon и другие китайские магазины. Если ссылки нет — подойдёт фото или скриншот товара.</p></details>
+        <details><summary>Можно прислать ссылку с Wildberries или Ozon?</summary><p>Да. Найдём такой же товар у китайского продавца и посчитаем цену. Часто это та же вещь с той же фабрики. Цену вы увидите до оплаты и сможете сравнить.</p></details>
+        <details><summary>Как оплатить?</summary><p>После подтверждения цены бот пришлёт QR-код для перевода через СБП. Оплатите в приложении банка и пришлите в бот скриншот чека — мы проверим поступление и начнём выкуп.</p></details>
+        <details><summary>Как отследить заказ?</summary><p>Бот присылает сообщение на каждом этапе: выкуплен, отправлен карго, прибыл в Россию, передан в СДЭК (с трек-номером), ждёт в пункте выдачи. Список заказов — команда /orders.</p></details>
+        <details><summary>Что нельзя отправить карго?</summary><p>Жидкости, аккумуляторы, порошки и некоторые хрупкие товары едут не всегда или на особых условиях. Уточним до оплаты.</p></details>
+        <details><summary>Можно заказать оптом?</summary><p>Да, в том числе с 1688 — для магазина или маркетплейсов. Чем больше вещей в заказе, тем дешевле выходит каждая.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Мы на связи</h2>
+        <p class="sub">Заказ и расчёт — в боте. Находки и новости — в канале и Instagram*.</p>
+        <div class="socials">
+          <a class="soc main" href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener">
+            <span class="badge">Заказать здесь</span>
+            <span class="soc-top"><span class="soc-ic tg"><svg><use href="#bot"/></svg></span><span class="who"><b>Telegram-бот</b><span>@shanghaibox_bot</span></span></span>
+            <p>Расчёт цены, оплата и статусы заказа.</p>
+            <img src="qr-bot.svg" alt="QR-код: Telegram-бот @shanghaibox_bot" width="148" height="148">
+            <span class="go">Открыть бота →</span>
+          </a>
+          <a class="soc" href="https://t.me/cargo_cn_rus" target="_blank" rel="noopener">
+            <span class="soc-top"><span class="soc-ic tg"><svg><use href="#mega"/></svg></span><span class="who"><b>Telegram-канал</b><span>@cargo_cn_rus</span></span></span>
+            <p>Находки из Китая, цены и новости доставки.</p>
+            <img src="qr-channel.svg" alt="QR-код: Telegram-канал @cargo_cn_rus" width="148" height="148">
+            <span class="go">Подписаться →</span>
+          </a>
+          <a class="soc" href="https://instagram.com/cargo_cn_rus" target="_blank" rel="noopener">
+            <span class="soc-top"><span class="soc-ic ig"><svg><use href="#ig"/></svg></span><span class="who"><b>Instagram*</b><span>@cargo_cn_rus</span></span></span>
+            <p>Фото, находки и новости Shanghai Box.</p>
+            <img src="qr-instagram.svg" alt="QR-код: Instagram @cargo_cn_rus" width="148" height="148">
+            <span class="go">Перейти →</span>
+          </a>
+        </div>
+        <div class="links">
+          <span>Менеджер:</span>
+          <a href="https://t.me/danildemintsev" target="_blank" rel="noopener">Telegram @danildemintsev</a>
+          <a href="tel:+79940152969">+7 994 015-29-69</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Shanghai Box («Шанхай Бокс») · Товары из Китая под заказ</span>
+    <nav aria-label="Контакты">
+      <a href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener">Бот</a>
+      <a href="https://t.me/cargo_cn_rus" target="_blank" rel="noopener">Канал</a>
+      <a href="https://instagram.com/cargo_cn_rus" target="_blank" rel="noopener">Instagram*</a>
+    </nav>
+    <div class="reqs">
+      <p><b>ИП Деминцев Данил Денисович</b> · ИНН 250816664797 · ОГРНИП 326253600109353</p>
+      <p>Почта: <a href="mailto:demintcev.dd@ya.ru">demintcev.dd@ya.ru</a> · Телефон: <a href="tel:+79940152969">+7 994 015-29-69</a> · претензии и вопросы по заказам — сюда же или менеджеру в Telegram</p>
+      <p class="docs"><a href="oferta.html">Договор-оферта и условия возврата</a><a href="politika.html">Политика обработки персональных данных</a><a href="soglasie.html">Согласие на обработку данных</a></p>
+      <p>Сайт не использует cookies и сервисы аналитики.</p>
+    </div>
+    <span class="fine">* Instagram принадлежит компании Meta Platforms Inc., деятельность которой признана экстремистской и запрещена на территории РФ.</span>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn btn-gold" href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener"><svg><use href="#tg"/></svg>Рассчитать в боте</a>
+</div>
+
+</body>
+</html>
