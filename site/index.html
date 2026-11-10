@@ -52,10 +52,10 @@
   .btn-gold:active { box-shadow: 0 2px 0 var(--gold-dark); }
   .btn-red { background: var(--red); color: #fff; box-shadow: 0 5px 0 var(--deep); }
   .btn-line { border: 2px solid rgba(255,255,255,.5); color: #fff; }
-  .btn-max { background: linear-gradient(135deg, #3D7BFF, #8A3FFC); color: #fff; box-shadow: 0 5px 0 #4A2BB8; }
+  .btn-max { background: linear-gradient(60deg, #12B6F8 0%, #3A5CFA 38%, #5A22F5 66%, #9D10FA 100%); color: #fff; box-shadow: 0 5px 0 #4A2BB8; }
   .btn-max:active { box-shadow: 0 2px 0 #4A2BB8; }
   .btn-max.btn-sm { box-shadow: none; }
-  .btn-max.btn-sm:hover { background: linear-gradient(135deg, #2F6BEF, #7A30EC); }
+  .btn-max.btn-sm:hover { filter: brightness(.94); }
   .bar-btns { display: flex; gap: 8px; }
   .btn-line:hover { background: rgba(255,255,255,.1); }
   .btn-sm { height: 42px; padding: 0 16px; font-size: 15px; border-radius: 11px; box-shadow: none; }
@@ -195,22 +195,24 @@
   /* Контакты */
   .contact { background: radial-gradient(100% 120% at 0% 0%, #EC4359 0%, var(--red) 40%, var(--deep) 100%); color: #fff; border-radius: 32px; padding: 56px; }
   .contact .sub { color: rgba(255,255,255,.85); }
-  .socials { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; }
-  .soc { background: #fff; color: var(--ink); border-radius: 24px; padding: 22px; display: flex; flex-direction: column; transition: transform .15s ease; }
+  .socials { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 36px; }
+  .soc { position: relative; background: #fff; color: var(--ink); border-radius: 24px; padding: 22px; display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; transition: transform .15s ease; }
   .soc:hover { transform: translateY(-3px); }
-  .soc-top { display: flex; align-items: center; gap: 12px; }
+  .soc-top { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .who { min-width: 0; overflow-wrap: anywhere; }
   .soc-ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex: none; color: #fff; }
   .soc-ic svg { width: 24px; height: 24px; }
   .soc-ic.tg { background: #2AABEE; }
-  .soc-ic.mx { background: linear-gradient(135deg, #3D7BFF, #8A3FFC); }
+  .soc-ic.mx { background: linear-gradient(60deg, #12B6F8 0%, #3A5CFA 38%, #5A22F5 66%, #9D10FA 100%); }
+  .soc-ic.mx svg { width: 28px; height: 28px; }
   .soc-ic.ig { background: linear-gradient(45deg, #F9A825, #E1306C 55%, #833AB4); }
   .who b { display: block; font-size: 17px; }
   .who span { display: block; font-size: 14px; font-weight: 700; color: var(--muted); }
   .soc p { margin-top: 12px; font-size: 15px; color: var(--muted); }
-  .soc img { width: 148px; height: 148px; margin: 18px auto 4px; image-rendering: pixelated; }
-  .soc .go { margin-top: auto; padding-top: 14px; font-weight: 800; color: var(--red); font-size: 15px; }
+  .soc img { width: 148px; height: 148px; margin: 18px 0 4px; justify-self: center; image-rendering: pixelated; }
+  .soc .go { align-self: end; padding-top: 14px; font-weight: 800; color: var(--red); font-size: 15px; }
   .soc.main { box-shadow: 0 0 0 4px var(--gold); }
-  .soc .badge { align-self: flex-start; margin-bottom: 12px; background: var(--gold); color: var(--ink); font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
+  .soc .badge { position: absolute; top: -13px; left: 22px; background: var(--gold); color: var(--ink); font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
   .links { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 24px; font-weight: 700; }
   .links a { border-bottom: 1.5px solid rgba(255,255,255,.4); }
   .links a:hover { border-color: #fff; }
@@ -236,9 +238,10 @@
     .cats { grid-template-columns: repeat(2, 1fr); }
     .versus, .takeaways { grid-template-columns: minmax(0, 1fr); }
     .socials { grid-template-columns: minmax(0, 1fr); }
-    .soc { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 18px; align-items: center; }
-    .soc .badge, .soc-top, .soc p, .soc .go { grid-column: 1; }
-    .soc img { grid-column: 2; grid-row: 1 / span 4; width: 112px; height: 112px; margin: 0; }
+    .soc-top { flex-direction: row; align-items: center; }
+    .soc { grid-row: auto; grid-template-rows: none; grid-template-columns: minmax(0, 1fr) auto; column-gap: 18px; align-items: center; }
+    .soc-top, .soc p, .soc .go { grid-column: 1; }
+    .soc img { grid-column: 2; grid-row: 1 / span 3; width: 112px; height: 112px; margin: 0; }
   }
   @media (max-width: 720px) {
     body { font-size: 16px; padding-bottom: 78px; }
@@ -265,7 +268,8 @@
     .ticket { padding: 20px; }
     .code { width: 48px; height: 48px; font-size: 13px; border-radius: 13px; }
     .route { gap: 6px; }
-    .soc { display: flex; padding: 20px; }
+    .soc { display: flex; flex-direction: column; align-items: stretch; padding: 20px; }
+    .soc .go { align-self: auto; margin-top: auto; }
     .soc img { display: none; }   /* QR с телефона на этом же телефоне не отсканировать */
     .dock { display: block; position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,248,243,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
     .dock { display: flex; gap: 10px; }
@@ -285,7 +289,7 @@
   <symbol id="box" viewBox="0 0 24 24"><path d="M12 2.8 20.5 7v10L12 21.2 3.5 17V7z M3.5 7 12 11.2 20.5 7 M12 11.2v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3V19H4z"/><circle cx="12" cy="13.2" r="3.4"/></g></symbol>
   <symbol id="bot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4.5M9 13h.01M15 13h.01M9.5 16.5h5"/></g></symbol>
-  <symbol id="mx" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M8 13V8l4 3.2L16 8v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="mx" viewBox="0 0 100 100"><path fill="currentColor" fill-rule="evenodd" d="M50.76 0c27.53 0 49.12 22.34 49.12 49.89S77.61 99.23 51.02 99.23c-9.43 0-14.01-1.33-21.37-6.54-.5-.36-1.2-.26-1.63.19-5.66 6.04-20.17 10.28-20.83 2.03C7.19 80.53 0 71.18 0 49.61 0 21.3 23.22 0 50.76 0m.77 24.55c-13.07-.68-23.26 8.39-25.51 22.58-1.86 11.75 1.44 26.07 4.26 26.8 1.2.3 4.08-1.9 6.18-3.88.4-.37.99-.44 1.45-.15 3.27 2 6.97 3.5 11.05 3.71 13.42.7 25.3-9.8 26-23.21.71-13.42-10.01-25.14-23.43-25.85"/></symbol>
   <symbol id="mega" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6l-7 4zM17.5 9a4 4 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -303,7 +307,7 @@
       <a href="#contact">Контакты</a>
     </nav>
     <div class="bar-btns">
-      <a class="btn btn-red btn-sm" href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span class="long">Заказать в&nbsp;</span>Telegram</a>
+      <a class="btn btn-red btn-sm" href="https://t.me/shanghaibox_bot?start=site" target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span><span class="long">Заказать в </span>Telegram</span></a>
       <a class="btn btn-max btn-sm" href="https://max.ru/id250816664797_bot?start=site" target="_blank" rel="noopener"><svg><use href="#mx"/></svg>MAX</a>
     </div>
   </div>
@@ -528,7 +532,7 @@
           </a>
           <a class="soc" href="https://max.ru/id250816664797_bot?start=site" target="_blank" rel="noopener">
             <span class="soc-top"><span class="soc-ic mx"><svg><use href="#mx"/></svg></span><span class="who"><b>Бот в MAX</b><span>id250816664797_bot</span></span></span>
-            <p>Тот же бот: расчёт, оплата и статусы — в MAX.</p>
+            <p>Расчёт цены, оплата и статусы — в MAX.</p>
             <img src="qr-max.svg" alt="QR-код: бот Shanghai Box в MAX" width="148" height="148">
             <span class="go">Открыть в MAX →</span>
           </a>
