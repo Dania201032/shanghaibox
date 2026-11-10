@@ -237,7 +237,7 @@
     .leg:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
     .cats { grid-template-columns: repeat(2, 1fr); }
     .versus, .takeaways { grid-template-columns: minmax(0, 1fr); }
-    .socials { grid-template-columns: minmax(0, 1fr); }
+    .socials { grid-template-columns: minmax(0, 1fr); row-gap: 28px; }
     .soc-top { flex-direction: row; align-items: center; }
     .soc { grid-row: auto; grid-template-rows: none; grid-template-columns: minmax(0, 1fr) auto; column-gap: 18px; align-items: center; }
     .soc-top, .soc p, .soc .go { grid-column: 1; }
@@ -530,7 +530,8 @@
             <img src="qr-bot.svg" alt="QR-код: Telegram-бот @shanghaibox_bot" width="148" height="148">
             <span class="go">Открыть бота →</span>
           </a>
-          <a class="soc" href="https://max.ru/id250816664797_bot?start=site" target="_blank" rel="noopener">
+          <a class="soc main" href="https://max.ru/id250816664797_bot?start=site" target="_blank" rel="noopener">
+            <span class="badge">Заказать здесь</span>
             <span class="soc-top"><span class="soc-ic mx"><svg><use href="#mx"/></svg></span><span class="who"><b>Бот в MAX</b><span>id250816664797_bot</span></span></span>
             <p>Расчёт цены, оплата и статусы — в MAX.</p>
             <img src="qr-max.svg" alt="QR-код: бот Shanghai Box в MAX" width="148" height="148">
